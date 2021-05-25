@@ -16,7 +16,19 @@ export const getReviews = async (category) => {
   return data.reviews;
 };
 
+export const getReviewById = async (id) => {
+  return null;
+};
+
 export const getCategories = async () => {
   const { data } = await ncApi.get("/categories");
   return data.categories;
+};
+
+export const atTimeOnDate = (mess) => {
+  const elements = mess.split("T");
+  let date = elements[0];
+  let time = elements[1].substring(0, 8);
+
+  return `at ${time} on ${date}`;
 };

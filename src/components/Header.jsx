@@ -1,9 +1,10 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const Header = () => {
     return (
         <div className="app-header">
-            BIG OL' HEADER
+            <Link to="/">BIG OL' HEADER</Link>
         </div>
     );
 };

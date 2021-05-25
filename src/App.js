@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Reviews from "./components/Reviews";
-import CatStrategy from "./components/CatStrategy";
 import Footer from "./components/Footer";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
