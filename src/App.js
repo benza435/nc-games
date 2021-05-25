@@ -21,8 +21,8 @@ function App() {
           <Route path="/reviews" exact>
             <Reviews />
           </Route>
-          <Route path="/reviews/strategy" exact>
-            <CatStrategy />
+          <Route path="/reviews/:category" exact>
+            <Reviews />
           </Route>
         </Switch>
         <Footer />
