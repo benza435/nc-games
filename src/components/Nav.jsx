@@ -1,9 +1,37 @@
-import React from 'react';
+import React, { useEffect,useState } from 'react';
+import { Link } from 'react-router-dom';
+import {getCategories} from '../utils/api'
 
 const Nav = () => {
+const [categories, setCategories] = useState([])
+
+useEffect(()=>{
+    getCategories().then((cats)=>{
+        setCategories(cats)})
+    .catch(err =>{
+        console.log(err)
+    })
+},[])
+
     return (
         <div className="app-navbar">
-            NAV BAR IN THIS BIT 
+            <ul>
+                <li>
+           <Link to="/">
+                Home    
+           </Link> 
+                </li><li>
+           <Link to="/reviews">
+               All Reviews
+           </Link> 
+
+                </li>
+           {categories.map((cat)=>{
+               return <li key={cat.slug}><Link to={`/reviews/${cat.slug}`}>
+                   {cat.slug}
+               </Link></li>
+           })}
+           </ul>
         </div>
     );
 };
