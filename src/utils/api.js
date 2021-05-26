@@ -37,6 +37,10 @@ export const getComments = async (review_id) => {
   return data.comments;
 };
 
-// patchVotes()
+export const patchVotes = async (review_id) => {
+  await ncApi.patch(`/reviews/${review_id}`, { inc_votes: 1 });
+
+  return null;
+};
 
 // getUserAvatar()

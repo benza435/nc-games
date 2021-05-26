@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
-import {atTimeOnDate, getReviewById, getReviews} from '../utils/api'
-import {Link, useParams} from 'react-router-dom'
+import {atTimeOnDate, getReviewById} from '../utils/api'
+import {useParams} from 'react-router-dom'
 import img404 from '../img/sad_dice.jpg'
 import VoteButton from './VoteButton'
 
@@ -32,7 +32,7 @@ let gameImage = (review.review_img_url)? review.review_img_url: img404
            
                     <h2>{review.title}</h2> 
                     <h3>by {review.owner}</h3>
-                    {/* <h4>{atTimeOnDate(review.created_at)}</h4> */}
+                    <h4>{atTimeOnDate(review.created_at)}</h4>
                     <p>{review.review_body}</p>
                     
                     <VoteButton votes={review.votes} id={review.review_id}/>
