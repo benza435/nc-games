@@ -1,7 +1,8 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
 import {getComments} from '../utils/api'
-import {useParams} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
+import SubmitComment from './SubmitComment'
 
 const Comments = () => {
 const [comments,setComments] = useState([])
@@ -21,18 +22,20 @@ useEffect(()=>{
 
 if (isLoading) return <p>LOADING!!!</p>;
     return (
-        
+        <div>
+            <h2>horizontal  thing here with search and sort functions</h2>
+        <SubmitComment setComments={setComments} user={"jessjelly"} id={params.review_id}/>
         <ul>
-            <h2>comments</h2>
+<span>what is going on</span>
             {comments.map((comment)=>{
                 return(
-                <div className="comment-card">
+                <div key={comment.comment_id} className="comment-card">
                     <h2>{comment.author}</h2>
                     <p>{comment.body}</p>
                     </div>
             )})}
         </ul>
-      
+        </div>
     );
 };
 

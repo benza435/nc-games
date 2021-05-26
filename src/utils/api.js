@@ -43,4 +43,16 @@ export const patchVotes = async (review_id) => {
   return null;
 };
 
+export const postComment = async (review_id, user, body) => {
+  const newComment = { body: body, username: user };
+  const { data } = await ncApi.post(
+    `/reviews/${review_id}/comments`,
+    newComment
+  );
+  return data.comment;
+};
+
+// stuff for later:
 // getUserAvatar()
+// get top 10 comments/reviews/users etc
+//  cycle clickbait

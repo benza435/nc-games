@@ -15,8 +15,8 @@ useEffect(()=>{
 
     return (
         <div className="app-navbar">
-            <ul>
-         <li>
+            <ul className="links-list">
+         <li className="nav-element">
            <Link to="/reviews">
                All Reviews
            </Link> 
