@@ -3,8 +3,15 @@ import React from 'react';
 const Footer = () => {
     return (
         <div className="app-footer">
-                    Stuff for right down the bottom with legal terms and nonsense
+            <div className="footer-left"> </div>
+            <div className="footer-centre"> </div>
+            <div className="footer-right"> </div>
         </div>
+  
+
+
+
+
     );
 };
 

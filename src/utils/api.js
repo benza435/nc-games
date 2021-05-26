@@ -31,3 +31,12 @@ export const atTimeOnDate = (mess) => {
 
   return `at ${time} on ${date}`;
 };
+
+export const getComments = async (review_id) => {
+  const { data } = await ncApi.get(`/reviews/${review_id}/comments`);
+  return data.comments;
+};
+
+// patchVotes()
+
+// getUserAvatar()
