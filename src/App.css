@@ -42,11 +42,12 @@ ul {
   margin: 20px;
   padding: 15px;
   background-color: chocolate;
+  display: flex;
+  justify-content: space-between;
 }
 
 .review-card-img-small {
-  width: 100px;
-  height: 100px;
+  max-height: 200px;
   object-fit: cover;
 }
 

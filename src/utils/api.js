@@ -5,9 +5,7 @@ const ncApi = axios.create({
 });
 
 export const getReviews = async (category) => {
-  console.log(category);
   const { data } = await ncApi.get("/reviews");
-  // take category as arg, modify path, return reviews by category?
   if (category) {
     return data.reviews.filter((review) => {
       return review.category === category;
@@ -17,7 +15,8 @@ export const getReviews = async (category) => {
 };
 
 export const getReviewById = async (id) => {
-  return null;
+  const { data } = await ncApi.get(`/reviews/${id}`);
+  return data.review;
 };
 
 export const getCategories = async () => {
