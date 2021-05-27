@@ -4,24 +4,15 @@ const ncApi = axios.create({
   baseURL: "https://nc-games-example.herokuapp.com/api",
 });
 
-export const getReviews = async (category, sortOrder) => {
+export const getReviews = async (category, sort_by, order) => {
   const { data } = await ncApi.get("/reviews", {
     params: {
       category: category,
-      sort_by: sortOrder,
+      sort_by: sort_by,
+      order: order,
     },
   });
-
-  return data.reviews;
-};
-
-// get ALL REVIEWS and sort them
-export const getAndSortReviews = async ({ sortValue }) => {
-  const { data } = await ncApi.get("/reviews", {
-    params: {
-      sort_by: sortValue,
-    },
-  });
+  console.log("getReviews:", category, sort_by, order);
   return data.reviews;
 };
 
