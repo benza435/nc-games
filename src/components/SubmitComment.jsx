@@ -33,11 +33,12 @@ const SubmitComment = (props) => {
           id='new-comment'
           value={newComment}
           onChange={(event) => {
+            console.log(event.target.value)
+            if(event.target.value==="")return;
             setNewComment(event.target.value);
                     }}
                     ></input>
-                <button //onClick="postComment()"
-                >Submit</button>
+                <button>Submit</button>
 
             </form>
         </div>

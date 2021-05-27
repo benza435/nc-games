@@ -19,6 +19,16 @@ export const getReviewById = async (id) => {
   return data.review;
 };
 
+// get ALL REVIEWS and sort them
+export const getAndSortReviews = async ({ sortValue }) => {
+  const { data } = await ncApi.get("/reviews", {
+    params: {
+      sort_by: sortValue,
+    },
+  });
+  return data.reviews;
+};
+
 export const getCategories = async () => {
   const { data } = await ncApi.get("/categories");
   return data.categories;
@@ -53,6 +63,7 @@ export const postComment = async (review_id, user, body) => {
 };
 
 // stuff for later:
+
 // getUserAvatar()
 // get top 10 comments/reviews/users etc
 //  cycle clickbait
