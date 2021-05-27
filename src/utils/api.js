@@ -4,7 +4,7 @@ const ncApi = axios.create({
   baseURL: "https://nc-games-example.herokuapp.com/api",
 });
 
-export const getReviews = async (category, sort_by, order) => {
+export const getReviews = async (category, sort_by, order, limit) => {
   const { data } = await ncApi.get("/reviews", {
     params: {
       category: category,
@@ -14,6 +14,20 @@ export const getReviews = async (category, sort_by, order) => {
   });
   console.log("getReviews:", category, sort_by, order);
   return data.reviews;
+};
+
+export const getTopReviews = async () => {
+  const { data } = await ncApi.get("reviews", {
+    params: { sort_by: "votes", order: "desc" },
+  });
+  return [data.reviews[0], data.reviews[1], data.reviews[2]];
+};
+
+export const getLatestReviews = async () => {
+  const { data } = await ncApi.get("reviews", {
+    params: { sort_by: "created_at", order: "desc" },
+  });
+  return [data.reviews[0], data.reviews[1], data.reviews[2]];
 };
 
 export const getReviewById = async (id) => {

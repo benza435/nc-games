@@ -16,6 +16,7 @@ useEffect(()=>{
     })
     .catch((err)=>{
         console.log(err)
+
     })
 },[params.review_id])
 
@@ -26,10 +27,9 @@ let gameImage = (review.review_img_url)? review.review_img_url: img404
     return (
         <div className="app-reviews">
             <div key="" className="review-card-big">
-            <h1>One single review:</h1>
-            
-                       <img src={gameImage} alt="game" className="review-card-img-big"/>
            
+                       <img src={gameImage} alt="game" className="review-card-img-big"/>
+          
                     <h2>{review.title}</h2> 
                     <h3>by {review.owner}</h3>
                     <h4>{atTimeOnDate(review.created_at)}</h4>

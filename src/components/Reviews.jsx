@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react';
 import {getReviews} from '../utils/api';
 import {useParams} from 'react-router-dom'
-import img404 from '../img/sad_dice.jpg'
 import ReviewCards from './ReviewCards'
 import ReviewSortOptions from './ReviewSortOptions'
 

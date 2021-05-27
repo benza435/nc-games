@@ -68,11 +68,23 @@ body {
   justify-content: space-between;
 }
 
+.review-card-mini {
+  max-width: 150px;
+  border-style: groove;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 5px;
+  background-color: cadetblue;
+}
+
 .review-card-img-small {
   max-height: 200px;
   object-fit: cover;
 }
-
+.review-card-img-tiny {
+  max-height: 50px;
+  object-fit: cover;
+}
 .review-card-img-big {
   max-width: 80%;
   object-fit: cover;
@@ -99,4 +111,12 @@ li a {
 
 li a:hover {
   background-color: #111111;
+}
+
+.box {
+  border: blueviolet;
+  border-style: solid;
+  border-width: 10px;
+  background-color: brown;
+  display: flex;
 }
