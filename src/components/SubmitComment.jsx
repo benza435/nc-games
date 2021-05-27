@@ -25,7 +25,7 @@ const SubmitComment = (props) => {
         })         
           .catch((err)=>{console.log(err)})
           
-         //setNewComment("");
+         setNewComment("");
         }}
       >
           <label htmlFor='new-comment'>Comment: </label>
@@ -38,6 +38,7 @@ const SubmitComment = (props) => {
                     ></input>
                 <button //onClick="postComment()"
                 >Submit</button>
+
             </form>
         </div>
     );

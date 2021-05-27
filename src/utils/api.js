@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const ncApi = axios.create({
-  baseURL: "https://ncnews-9000.herokuapp.com/api",
+  baseURL: "https://nc-games-example.herokuapp.com/api",
 });
 
 export const getReviews = async (category) => {

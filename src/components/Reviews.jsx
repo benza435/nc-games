@@ -23,6 +23,7 @@ return (
     
     <div className="app-reviews">
         <h1>selected reviews:</h1>
+        <button>Sort A-Z</button><button>Sort 0-9</button>
             {reviews.map((review) => {
             let gameImage = (review.review_img_url)? review.review_img_url: img404
             console.log(review.review_id)    
