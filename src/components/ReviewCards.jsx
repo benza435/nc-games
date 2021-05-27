@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom'
 
 
 const ReviewCards = ({reviews}) => {
-    let commentCount = 0
     return (
 
 <>

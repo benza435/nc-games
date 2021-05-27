@@ -3,7 +3,6 @@ import {atTimeOnDate, getReviewById} from '../utils/api'
 import {useParams} from 'react-router-dom'
 import img404 from '../img/sad_dice.jpg'
 import VoteButton from './VoteButton'
-import SubmitComment from './SubmitComment'
 
 const ReviewById = () => {
 const [review, setReview] = useState([])

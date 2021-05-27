@@ -36,9 +36,3 @@ const ReviewSortOptions = ({setSortBy, setOrderBy}) => {
 };
 
 export default ReviewSortOptions;
-
-
-
-{/* <button onClick={()=>{
-        setSortBy("votes")
-        }}>sort by votes descending button!</button><p/> */}

@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
-import {atTimeOnDate, getReviews, getReviewById} from '../utils/api';
-import {Link, useParams} from 'react-router-dom'
+import {getReviews} from '../utils/api';
+import {useParams} from 'react-router-dom'
 import img404 from '../img/sad_dice.jpg'
 import ReviewCards from './ReviewCards'
 import ReviewSortOptions from './ReviewSortOptions'
@@ -19,6 +19,7 @@ useEffect(()=>{
     })
     .catch((err)=>{
         console.log(err)
+
     })
 },[params.category, sortBy, order])
 

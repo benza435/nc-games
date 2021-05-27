@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
 import {getComments} from '../utils/api'
-import {Link, useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 import SubmitComment from './SubmitComment'
 
 const Comments = () => {
