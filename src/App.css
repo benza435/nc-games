@@ -1,9 +1,38 @@
 .App {
-  text-align: center;
   width: 100%;
 }
+
 body {
-  margin: 0;
+  margin: 0px;
+  background-color: seashell;
+}
+a:link {
+}
+a:visited {
+}
+a:hover {
+}
+a:active {
+}
+
+.header {
+  background-color: darkorange;
+}
+/*
+navbar stuff
+*/
+.liNav {
+  float: left;
+}
+.liNav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+.liNav a:hover {
+  background-color: #111111;
 }
 .links-list {
   list-style: none;
@@ -11,12 +40,8 @@ body {
   padding: 0;
   overflow: hidden;
   background-color: #333333;
+  width: 100%;
 }
-
-.app-header {
-  background-color: darkgoldenrod;
-}
-
 .app-navbar {
   justify-content: center;
   background-color: #333;
@@ -24,99 +49,74 @@ body {
   flex-direction: row;
 }
 
-.app-reviews {
-  background-color: burlywood;
-  padding-top: 20px;
+/*
+review cards and galleries by page
+*/
+.review-gallery-home {
+  display: flex;
 }
-
-.app-footer {
-  bottom: 0;
-  width: 100%;
-  height: 200px;
-  background-color: cadetblue;
-  padding: 25px;
+.review-gallery-main {
+}
+.review-card-home {
+  border: black;
+  border-width: 1px;
+  border-style: solid;
+  margin: 10px;
+  max-width: 150px;
+}
+.review-card-img-home {
+  max-width: 150px;
+}
+.review-card-home:hover {
+  border-width: 2px;
+  margin: 9px;
+}
+.review-card-main {
+  background-color: gainsboro;
+  border: black;
+  border-width: 1px;
+  border-style: solid;
   display: flex;
   flex-direction: row;
+  margin: 10px;
 }
-.footer-left {
-  background-color: cornflowerblue;
-  border-style: solid;
-  border-color: darkslategray;
+.review-card-main:hover {
   border-width: 2px;
+  margin-left: 10px;
+  margin-right: 9px;
+  background-color: rgb(210, 210, 210);
 }
-.footer-centre {
-  background-color: darkcyan;
-  border-style: solid;
-  border-color: darkslategray;
-  border-width: 2px;
-}
-.footer-right {
-  background-color: darkseagreen;
-  border-style: solid;
-  border-color: darkslategray;
-  border-width: 2px;
-}
-
-.review-card {
-  max-width: 700px;
-  border-style: groove;
-  border-radius: 10px;
-  margin: 20px auto;
-  padding: 15px;
-  background-color: cadetblue;
-  display: flex;
-  justify-content: space-between;
-}
-
-.review-card-mini {
-  max-width: 150px;
-  border-style: groove;
-  border-radius: 10px;
-  margin: 20px auto;
-  padding: 5px;
-  background-color: cadetblue;
-}
-
-.review-card-img-small {
-  max-height: 200px;
+.review-card-img-main {
+  width: 250px;
+  height: 250px;
   object-fit: cover;
 }
-.review-card-img-tiny {
-  max-height: 50px;
-  object-fit: cover;
+.review-card-main-details {
+  margin-left: 10px;
 }
-.review-card-img-big {
-  max-width: 80%;
-  object-fit: cover;
+.userIcon {
+  width: 30px;
+  height: 30px;
 }
-
-.comment-card {
-  background-color: blanchedalmond;
-  border-style: solid;
-  border-width: 2px;
+.review-page {
+}
+.review-full {
   width: 80%;
+  margin: auto;
 }
-
-li {
-  float: left;
+.review-full-img {
+  width: 60%;
 }
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
+.share-icon {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  border-radius: 30px;
+  background-color: seashell;
 }
-
-li a:hover {
-  background-color: #111111;
+.share-icon:hover {
+  opacity: 0.5;
 }
-
-.box {
-  border: blueviolet;
-  border-style: solid;
-  border-width: 10px;
-  background-color: brown;
-  display: flex;
+.review-body {
+  max-width: 750px;
 }

@@ -23,15 +23,15 @@ const LatestReviews = () => {
     return (
         <>
 <h2>Latest reviews:</h2>
-<div className="box">
+<div className="review-gallery-home">
 
 {reviews.map((review) => {
     let gameImage = (review.review_img_url)? review.review_img_url: img404
     return (
-        <div key={review.review_id} className="review-card-mini">
+        <div key={review.review_id} className="review-card-home">
             <div>
           
-            <img src={gameImage} alt="game" className="review-card-img-tiny"/>
+            <img src={gameImage} alt="game" className="review-card-img-home"/>
             </div>
             <div>
             <h4>{review.title}</h4> 

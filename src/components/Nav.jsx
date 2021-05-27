@@ -16,14 +16,14 @@ useEffect(()=>{
     return (
         <div className="app-navbar">
             <ul className="links-list">
-         <li className="nav-element">
+         <li className="liNav">
            <Link to="/reviews">
                All Reviews
            </Link> 
 
                 </li>
            {categories.map((cat)=>{
-               return <li key={cat.slug}><Link to={`/reviews/${cat.slug}`}>
+               return <li className="liNav" key={cat.slug}><Link to={`/reviews/${cat.slug}`}>
                    {cat.slug}
                </Link></li>
            })}

@@ -23,10 +23,9 @@ useEffect(()=>{
 if (isLoading) return <p>LOADING!!!</p>;
     return (
         <div>
-            <h2>horizontal  thing here with search and sort functions</h2>
+
         <SubmitComment setComments={setComments} user={"jessjelly"} id={params.review_id}/>
         <ul>
-<span>what is going on</span>
             {comments.map((comment)=>{
                 return(
                 <div key={comment.comment_id} className="comment-card">

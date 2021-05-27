@@ -1,4 +1,15 @@
-Commit 1:
+todo tomorrow:
 
-made some reusable components, app structure, api util function, drafted some plans.  
-Now somewhere between planning/sketching/building... it's an agile process.
+empty commment submission prevention AGAIN
+
+404 page
+
+mock user login system
+
+remove css link styling from review cards
+
+submit a load of reviews
+
+make some fake ads
+
+absolute party
