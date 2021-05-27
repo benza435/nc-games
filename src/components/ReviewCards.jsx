@@ -4,7 +4,7 @@ import {atTimeOnDate} from '../utils/api'
 import {Link} from 'react-router-dom'
 
 
-const ReviewCard = ({reviews}) => {
+const ReviewCards = ({reviews}) => {
     let commentCount = 0
     return (
 
@@ -33,6 +33,6 @@ const ReviewCard = ({reviews}) => {
 
     )};
 
-export default ReviewCard;
+export default ReviewCards;
 
 
