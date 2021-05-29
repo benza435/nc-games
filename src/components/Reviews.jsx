@@ -3,6 +3,7 @@ import {getReviews} from '../utils/api';
 import {useParams} from 'react-router-dom'
 import ReviewCards from './ReviewCards'
 import ReviewSortOptions from './ReviewSortOptions'
+import Loading from '../components/Loading'
 
 const Reviews = () => {
 const [reviews, setReviews] = useState([])
@@ -22,7 +23,7 @@ useEffect(()=>{
     })
 },[params.category, sortBy, order])
 
-if (isLoading) return <p>LOADING!!!</p>;
+if (isLoading) return <Loading/>;
 return (
     
     <div className="review-gallery-main">

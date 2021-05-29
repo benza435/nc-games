@@ -4,13 +4,15 @@ import {Link} from 'react-router-dom'
 import {getLatestReviews, atTimeOnDate} from '../utils/api'
 
 
-const LatestReviews = () => {
+const LatestReviews = (setLatestReviewsLoading) => {
     const [reviews, setReviews] = useState([])
 
 
     useEffect(()=>{
-        getLatestReviews().then((data)=>{
+        getLatestReviews()
+        .then((data)=>{
             setReviews(data)
+            setLatestReviewsLoading(false)
         })
         .catch((err)=>{
             console.log(err)

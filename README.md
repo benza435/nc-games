@@ -12,4 +12,6 @@ submit a load of reviews
 
 make some fake ads
 
+dynamic date/time output
+
 absolute party

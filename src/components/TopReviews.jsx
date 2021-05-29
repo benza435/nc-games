@@ -4,13 +4,15 @@ import {Link} from 'react-router-dom'
 import {getTopReviews} from '../utils/api'
 
 
-const TopReviews = () => {
+const TopReviews = (topReviewsLoading, setTopReviewsLoading) => {
     const [reviews, setReviews] = useState([])
 
 
     useEffect(()=>{
-        getTopReviews().then((data)=>{
+        getTopReviews()
+        .then((data)=>{
             setReviews(data)
+            setTopReviewsLoading(false)
         })
         .catch((err)=>{
             console.log(err)

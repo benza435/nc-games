@@ -23,8 +23,8 @@ useEffect(()=>{
 if (isLoading) return <p>LOADING!!!</p>;
     return (
         <div>
-
-        <SubmitComment setComments={setComments} user={"jessjelly"} id={params.review_id}/>
+ <SubmitComment setComments={setComments} user={"jessjelly"} id={params.review_id}/>
+        {/* <SubmitComment setComments={setComments} user={"tickle122"} id={params.review_id}/> */}
         <ul>
             {comments.map((comment)=>{
                 return(

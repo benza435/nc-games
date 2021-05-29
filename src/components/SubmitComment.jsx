@@ -9,7 +9,7 @@ const SubmitComment = (props) => {
     //  then rerender comments with the new one at the top?
     
     return (
-        <div>
+        <div className="submit-comment">
             <h1>Post a comment:</h1>
             <form
         onSubmit={(event) => {
@@ -29,7 +29,7 @@ const SubmitComment = (props) => {
         }}
       >
           <label htmlFor='new-comment'>Comment: </label>
-            <input
+            <textarea
           id='new-comment'
           value={newComment}
           onChange={(event) => {
@@ -37,7 +37,7 @@ const SubmitComment = (props) => {
             if(event.target.value==="")return;
             setNewComment(event.target.value);
                     }}
-                    ></input>
+                    ></textarea>
                 <button>Submit</button>
 
             </form>

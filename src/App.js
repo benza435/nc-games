@@ -1,6 +1,12 @@
 import React from "react";
-import * as component from "./components/All";
 import NotFound from "./components/NotFound";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import Home from "./components/Home";
+import Reviews from "./components/Reviews";
+import ReviewById from "./components/ReviewById";
+import Comments from "./components/Comments";
+import Footer from "./components/Footer";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -8,27 +14,27 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <component.Header />
-        <component.Nav />
+        <Header />
+        <Nav />
         <Switch>
           <Route path="/" exact>
-            <component.Home />
+            <Home />
           </Route>
           <Route path="/reviews" exact>
-            <component.Reviews />
+            <Reviews />
           </Route>
           <Route path="/reviews/:category" exact>
-            <component.Reviews />
+            <Reviews />
           </Route>
           <Route path="/reviews/id/:review_id" exact>
-            <component.ReviewById />
-            <component.Comments />
+            <ReviewById />
+            <Comments />
           </Route>
           <Route>
             <NotFound />
           </Route>
         </Switch>
-        <component.Footer />
+        <Footer />
       </Router>
     </div>
   );
