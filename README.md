@@ -1,17 +1,25 @@
-todo tomorrow:
+## priority todo:
 
-empty commment submission prevention AGAIN
+1. fix reviewbyId 404 - currently shows loading or crashes
 
-404 page
+2. fix home page loading loop (removed loading screen for now)
 
-mock user login system
+3. mock user login system
 
-remove css link styling from review cards
+4. update readme
 
-submit a load of reviews
+5. host the page
 
-make some fake ads
+### maybe later:
 
-dynamic date/time output
+1. add functionality to submit a review
 
-absolute party
+2. remove css link styling from review cards
+
+3. submit a load of reviews
+
+4. stop the banner from resizing when a scrollbar appears >:(
+
+5. make some fake ads
+
+6. dynamic date/time output
