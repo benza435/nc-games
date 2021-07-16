@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 const ReviewSortOptions = ({setSortBy, setOrderBy}) => {
     const [order, setOrder] = useState('asc')
-    const [sort, setSort] = useState('created_at')
+    const [sort, setSort] = useState('null')
     const handleSortChange = (event) =>{
         setSort(event.target.value)
     }
@@ -21,6 +21,7 @@ const ReviewSortOptions = ({setSortBy, setOrderBy}) => {
         }}
         >
             <select value={sort} onChange={handleSortChange}>
+                <option value="null">-- Choose a sort value --</option>
                 <option value="votes">Popular</option>
                 <option value="comment_count">Comments</option>
                 <option value="created_at">Newest</option>
