@@ -29,7 +29,7 @@ const SubmitComment = (props) => {
         }}
       >
           <label htmlFor='new-comment'>Comment: </label>
-            <textarea
+            <input required 
           id='new-comment'
           value={newComment}
           onChange={(event) => {
@@ -37,7 +37,7 @@ const SubmitComment = (props) => {
             if(event.target.value==="")return;
             setNewComment(event.target.value);
                     }}
-                    ></textarea>
+                    ></input>
                 <button>Submit</button>
 
             </form>

@@ -1,33 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import img404 from '../img/sad_dice.jpg'
 import {Link} from 'react-router-dom'
-import {getTopReviews} from '../utils/api'
 
 
-const TopReviews = (topReviewsLoading, setTopReviewsLoading) => {
-    const [reviews, setReviews] = useState([])
-
-
-    useEffect(()=>{
-        getTopReviews()
-        .then((data)=>{
-            setReviews(data)
-            setTopReviewsLoading(false)
-        })
-        .catch((err)=>{
-            console.log(err)
+const TopReviews = (topReviews) => {
     
-        })
-    },[])
 
 
-
+   
+console.log(topReviews.topReviews)
     return (
         <>
 <h2>Top reviews:</h2>
 <div className="review-gallery-home">
 
-{reviews.map((review) => {
+{topReviews.topReviews.map((review) => {
     let gameImage = (review.review_img_url)? review.review_img_url: img404
     return (
         <div key={review.review_id} className="review-card-home">

@@ -68,6 +68,13 @@ export const postComment = async (review_id, user, body) => {
   return data.comment;
 };
 
+export const getCategoryDescription = async (category) => {
+  const { data } = await ncApi.get(`/categories`);
+  //const description = data.find((cat) => cat === category);
+  console.log(data.categories[0].description);
+  return null;
+};
+
 // stuff for later:
 
 // getUserAvatar()

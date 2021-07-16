@@ -18,7 +18,7 @@ const LatestReviews = (setLatestReviewsLoading) => {
             console.log(err)
     
         })
-    },[])
+    },[setLatestReviewsLoading])
 
 
 

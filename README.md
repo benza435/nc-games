@@ -6,9 +6,13 @@
 
 3. mock user login system
 
-4. update readme
+4. error handling
 
-5. host the page
+5. update readme
+
+6. destructuring
+
+7. host the page
 
 ### maybe later:
 
@@ -21,5 +25,5 @@
 4. stop the banner from resizing when a scrollbar appears >:(
 
 5. make some fake ads
-
 6. dynamic date/time output
+7. maximum votes

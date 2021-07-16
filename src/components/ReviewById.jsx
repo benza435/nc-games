@@ -8,24 +8,34 @@ import facebook from '../img/socials/facebook.png'
 import reddit from '../img/socials/reddit.png'
 import twitter from '../img/socials/twitter.png'
 import whatsapp from '../img/socials/whatsapp.png'
+import NotFound from '../components/NotFound'
 
 const ReviewById = () => {
 const [review, setReview] = useState([])
 const [isLoading, setIsLoading]  = useState(true)
+const [is404, setIs404] = useState(false)
 const params = useParams()
 
-useEffect(()=>{
+useEffect(
+    ()=>{
     getReviewById(params.review_id).then((data)=>{
         setReview(data)
         setIsLoading(false)
     })
     .catch((err)=>{
-        console.log(err)
 
-    })
-},[params.review_id])
+    if(err.response.status===404){
+        setIs404(true)
+    }})
+
+}
+,[params.review_id, is404])
+
+if (is404) {setIsLoading(false)
+    return <NotFound/>}
 
 if (isLoading) return <p>LOADING!!!</p>;
+
 let gameImage = (review.review_img_url)? review.review_img_url: img404
     return (
         <div className="review-page">
